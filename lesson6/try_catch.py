@@ -82,3 +82,15 @@ print(list6)
 list5 = [j for i in list for j in i]
 
 print(list5)
+
+
+list_methods = []
+
+for method in dir(list):
+    if "__" not in method:
+        continue
+
+    list_methods.append(method)
+
+print(list_methods)
+
