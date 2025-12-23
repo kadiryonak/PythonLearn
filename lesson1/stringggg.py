@@ -8,7 +8,7 @@ multi‑line strings, raw strings, slicing, and common string methods.
 print("Selam, Dünya! Bu bir örnek.")
 
 # Variable assignments with different string literals
-kadir = "Merhaba Dünyakkkkk"
+kadir = "Merhaba Dünyaaa"
 kadirr = "Merhaba \nDünya"
 mesaj = "Merhaba \tDünya"
 mesaj2 = """Merhaba Dünya"""

@@ -94,3 +94,48 @@ for method in dir(list):
 
 print(list_methods)
 
+
+
+# Try-Catch
+
+try:    
+    a = 5
+    b = 6
+    print(a / b)
+    d = x
+except :
+    print("Bir hata oluştu!")
+    print("Hatayı düzelten kodlar burada çalışmalı!"
+    )
+finally:
+    print("İşlem tamamlandı!")
+
+
+try:    
+    a = 5
+    b = 6
+    print(a / b)
+    e = 0
+    a / e
+    print(a/e)
+except ZeroDivisionError:
+    print("Bir hata oluştu!")
+    print("Hatayı düzelten kodlar burada çalışmalı!"
+    )
+except Exception:
+    print("Bir hata oluştu!")
+    print("Hatayı düzelten kodlar burada çalışmalı!"
+    )
+except NameError:
+    print("Bir hata oluştu!")
+    print("Hatayı düzelten kodlar burada çalışmalı!"
+    )   
+except IndexError:
+    print("Bir hata oluştu!")
+    print("Hatayı düzelten kodlar burada çalışmalı!"
+    ) 
+finally:
+    print("İşlem tamamlandı!")
+
+
+

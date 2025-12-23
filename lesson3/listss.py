@@ -24,7 +24,7 @@ if __name__ == "__main__":
     renkler = []
     renk_listesi = ListL(renkler)
 
-    renk_listesi.append("lacivert")
+    renk_listesi.append("lacivert") # eleman ekleme
     renk_listesi.append("kırmızı")
     renk_listesi.append("sarı")
     renk_listesi.append("yeşil")
@@ -33,18 +33,18 @@ if __name__ == "__main__":
     renk_listesi.append("mor")
 
     renk_listesi.print_list()
-    renk_listesi.delete("lacivert")
+    renk_listesi.delete("lacivert") # eleman silme
     print("Lacivert silindi")
     renk_listesi.print_list()
 
     print("Join metodu")
-    stringrenkler = " ".join(renkler)
+    stringrenkler = " ".join(renkler)  # elemanları birleştirir
     print(stringrenkler)
 
-    renkler2 = stringrenkler.split(" ")
+    renkler2 = stringrenkler.split(" ")  # elemanları ayırır
     print(renkler2)
 
-    print("Kırmızı" in renkler)
+    print("Kırmızı" in renkler) # eleman var mı kontrol eder
 
     # index ve data şeklinde yazdırır
     print(list(enumerate(renkler, 1)))

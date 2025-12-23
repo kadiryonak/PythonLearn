@@ -277,12 +277,9 @@ class ZarSimulasyonu:
 
 
 if __name__ == "__main__":
-    print("=" * 60)
-    print("PYTHON MODÜL ÖRNEKLERİ")
-    print("=" * 60)
-    
+
     # Random Modülü
-    print("\n--- RANDOM MODÜLÜ ---")
+
     listee = ["Kadir", "Fatima", "Ali", "Veli", "Ayşe"]
     rand = RandomModul(listee)
     rand.randint_ornegi()
@@ -290,30 +287,29 @@ if __name__ == "__main__":
     rand.sample_ornegi()
     
     # Time Modülü
-    print("\n--- TIME MODÜLÜ ---")
+
     time_mod = TimeModul()
     time_mod.time_ornegi()
     time_mod.ctime_ornegi()
     time_mod.strftime_ornegi()
     
     # Datetime Modülü
-    print("\n--- DATETIME MODÜLÜ ---")
+
     dt_mod = DatetimeModul()
     dt_mod.datetime_now_ornegi()
     dt_mod.timedelta_ornegi()
     dt_mod.strftime_ornegi()
     
     # OS Modülü
-    print("\n--- OS MODÜLÜ ---")
+
     os_mod = OsModul()
     os_mod.getcwd_ornegi()
     os_mod.listdir_ornegi()
     os_mod.path_exists_ornegi()
     
     # Zar Simülasyonu
-    print("\n--- ZAR SİMÜLASYONU ---")
+
     zar = ZarSimulasyonu()
     zar.tek_zar_olasiligi()
     zar.cift_alti_olasiligi()
     
-    print("\n" + "=" * 60)

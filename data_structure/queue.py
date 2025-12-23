@@ -1,6 +1,6 @@
 # Queue (FIFO - First In First Out)
 # Linked list kullanarak queue (kuyruk) yapısı oluşturulmuştur.
-# İlk giren ilk çıkar - Banka kuyruğu gibi düşün!
+
 
 
 class Node:

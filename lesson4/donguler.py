@@ -3,9 +3,9 @@
 
 if __name__ == "__main__":
 
-    print("=" * 50)
+
     print("1. FOR DÖNGÜSÜ - TEMEL KULLANIM")
-    print("=" * 50)
+
 
     # Liste üzerinde döngü
     liste = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
@@ -38,9 +38,9 @@ if __name__ == "__main__":
         sonuc += a
     print(f"\n4'ten 9'a kadar toplam: {sonuc}")
 
-    print("\n" + "=" * 50)
+
     print("2. İÇ İÇE DÖNGÜLER (Nested Loops)")
-    print("=" * 50)
+
 
     liste1 = [1, 2, 3]
     liste2 = ["a", "b", "c"]
@@ -57,9 +57,9 @@ if __name__ == "__main__":
             print(f"{i*j:3}", end=" ")
         print()
 
-    print("\n" + "=" * 50)
+
     print("3. BREAK VE CONTINUE")
-    print("=" * 50)
+
 
     # break - Döngüyü tamamen durdurur
     print("break örneği (5'te dur):")
@@ -77,9 +77,7 @@ if __name__ == "__main__":
         print(i, end=" ")
     print()
 
-    print("\n" + "=" * 50)
     print("4. ELSE İLE DÖNGÜ")
-    print("=" * 50)
 
     # for-else: Döngü break olmadan biterse else çalışır
     print("Asal sayı kontrolü (7):")
@@ -91,9 +89,8 @@ if __name__ == "__main__":
     else:
         print(f"{sayi} asal sayıdır!")
 
-    print("\n" + "=" * 50)
+
     print("5. ENUMERATE - İNDEKS İLE GEZİNME")
-    print("=" * 50)
 
     meyveler = ["elma", "armut", "muz", "çilek"]
 
@@ -112,9 +109,7 @@ if __name__ == "__main__":
     for index, meyve in enumerate(meyveler, start=1):
         print(f"  {index}. {meyve}")
 
-    print("\n" + "=" * 50)
     print("6. ZIP - BİRDEN FAZLA LİSTE GEZİNME")
-    print("=" * 50)
 
     isimler = ["Ali", "Ayşe", "Mehmet"]
     yaslar = [25, 30, 22]

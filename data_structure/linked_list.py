@@ -1,6 +1,3 @@
-
-
-
 class Node:
 
     def __init__(self,data):
@@ -49,14 +46,7 @@ class LinkedList:
         while current and current.data !=value:
             prev = current
             current = current.next
-
-
-            
-            
-
         
-        
-
 
 if __name__ == "__main__":
 

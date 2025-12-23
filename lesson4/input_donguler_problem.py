@@ -7,9 +7,6 @@
 
 def problem_01_basamak_sayisi():
     """Bir sayının kaç basamaklı olduğunu bul."""
-    print("=" * 50)
-    print("PROBLEM 1: Basamak Sayısı")
-    print("=" * 50)
     
     sayilar = [5, 42, 123, 9999, 100000]
     for sayi in sayilar:
@@ -23,9 +20,6 @@ def problem_01_basamak_sayisi():
 
 def problem_02_basamak_toplami():
     """Bir sayının rakamları toplamını bul."""
-    print("\n" + "=" * 50)
-    print("PROBLEM 2: Basamak Toplamı")
-    print("=" * 50)
     
     sayilar = [123, 456, 9999, 12345]
     for sayi in sayilar:
@@ -39,9 +33,6 @@ def problem_02_basamak_toplami():
 
 def problem_03_sayi_ters_cevir():
     """Bir sayıyı tersine çevir."""
-    print("\n" + "=" * 50)
-    print("PROBLEM 3: Sayıyı Tersine Çevir")
-    print("=" * 50)
     
     sayilar = [123, 4567, 12345]
     for sayi in sayilar:
@@ -55,9 +46,6 @@ def problem_03_sayi_ters_cevir():
 
 def problem_04_palindrom_sayi():
     """Sayı palindrom mu? (Tersi kendisine eşit mi?)"""
-    print("\n" + "=" * 50)
-    print("PROBLEM 4: Palindrom Sayı")
-    print("=" * 50)
     
     sayilar = [121, 123, 1221, 12321, 12345]
     for sayi in sayilar:
@@ -74,9 +62,6 @@ def problem_04_palindrom_sayi():
 
 def problem_05_armstrong_sayi():
     """Armstrong sayısı mı? (Rakamların küpü toplamı = kendisi)"""
-    print("\n" + "=" * 50)
-    print("PROBLEM 5: Armstrong Sayısı")
-    print("=" * 50)
     
     sayilar = [153, 370, 371, 407, 123, 1634]
     for sayi in sayilar:
@@ -95,9 +80,6 @@ def problem_05_armstrong_sayi():
 def problem_06_mukemmel_sayi():
     """Mükemmel sayı mı? (Bölenlerinin toplamı = kendisi)
     Örnek: 6 = 1 + 2 + 3"""
-    print("\n" + "=" * 50)
-    print("PROBLEM 6: Mükemmel Sayı")
-    print("=" * 50)
     
     sayilar = [6, 12, 28, 496, 100]
     for sayi in sayilar:
@@ -113,9 +95,6 @@ def problem_06_mukemmel_sayi():
 
 def problem_07_faktoriyel():
     """Faktöriyel hesapla."""
-    print("\n" + "=" * 50)
-    print("PROBLEM 7: Faktöriyel")
-    print("=" * 50)
     
     for n in range(1, 8):
         fakt = 1
@@ -126,9 +105,6 @@ def problem_07_faktoriyel():
 
 def problem_08_fibonacci():
     """Fibonacci serisi."""
-    print("\n" + "=" * 50)
-    print("PROBLEM 8: Fibonacci Serisi")
-    print("=" * 50)
     
     n = 15
     a, b = 0, 1
@@ -141,9 +117,6 @@ def problem_08_fibonacci():
 
 def problem_09_asal_sayilar():
     """1-100 arası asal sayılar."""
-    print("\n" + "=" * 50)
-    print("PROBLEM 9: Asal Sayılar (1-100)")
-    print("=" * 50)
     
     print("Asallar: ", end="")
     for sayi in range(2, 101):
@@ -159,9 +132,6 @@ def problem_09_asal_sayilar():
 
 def problem_10_obeb_okek():
     """OBEB ve OKEK hesapla."""
-    print("\n" + "=" * 50)
-    print("PROBLEM 10: OBEB ve OKEK")
-    print("=" * 50)
     
     ciftler = [(12, 18), (24, 36), (15, 25)]
     for a, b in ciftler:
@@ -175,9 +145,6 @@ def problem_10_obeb_okek():
 
 def problem_11_ikili_donusum():
     """Ondalık sayıyı ikiliye çevir."""
-    print("\n" + "=" * 50)
-    print("PROBLEM 11: Ondalık -> İkili")
-    print("=" * 50)
     
     sayilar = [5, 10, 25, 100, 255]
     for sayi in sayilar:
@@ -195,9 +162,6 @@ def problem_11_ikili_donusum():
 
 def problem_12_sol_ucgen():
     """Sol hizalı yıldız üçgeni."""
-    print("\n" + "=" * 50)
-    print("PROBLEM 12: Sol Hizalı Üçgen")
-    print("=" * 50)
     
     n = 5
     for i in range(1, n + 1):
@@ -206,9 +170,6 @@ def problem_12_sol_ucgen():
 
 def problem_13_sag_ucgen():
     """Sağ hizalı yıldız üçgeni."""
-    print("\n" + "=" * 50)
-    print("PROBLEM 13: Sağ Hizalı Üçgen")
-    print("=" * 50)
     
     n = 5
     for i in range(1, n + 1):
@@ -217,9 +178,6 @@ def problem_13_sag_ucgen():
 
 def problem_14_ortali_piramit():
     """Ortalanmış piramit."""
-    print("\n" + "=" * 50)
-    print("PROBLEM 14: Ortalı Piramit")
-    print("=" * 50)
     
     n = 5
     for i in range(1, n + 1):
@@ -228,9 +186,6 @@ def problem_14_ortali_piramit():
 
 def problem_15_ters_piramit():
     """Ters piramit."""
-    print("\n" + "=" * 50)
-    print("PROBLEM 15: Ters Piramit")
-    print("=" * 50)
     
     n = 5
     for i in range(n, 0, -1):
@@ -239,9 +194,6 @@ def problem_15_ters_piramit():
 
 def problem_16_elmas():
     """Elmas deseni."""
-    print("\n" + "=" * 50)
-    print("PROBLEM 16: Elmas Deseni")
-    print("=" * 50)
     
     n = 5
     # Üst yarı
@@ -254,9 +206,6 @@ def problem_16_elmas():
 
 def problem_17_ici_bos_kare():
     """İçi boş kare."""
-    print("\n" + "=" * 50)
-    print("PROBLEM 17: İçi Boş Kare")
-    print("=" * 50)
     
     n = 5
     for i in range(n):
@@ -270,9 +219,6 @@ def problem_17_ici_bos_kare():
 
 def problem_18_ici_bos_piramit():
     """İçi boş piramit."""
-    print("\n" + "=" * 50)
-    print("PROBLEM 18: İçi Boş Piramit")
-    print("=" * 50)
     
     n = 5
     for i in range(1, n + 1):
@@ -286,9 +232,6 @@ def problem_18_ici_bos_piramit():
 
 def problem_19_sayi_piramidi():
     """Sayı piramidi (1, 12, 123...)."""
-    print("\n" + "=" * 50)
-    print("PROBLEM 19: Sayı Piramidi (Artan)")
-    print("=" * 50)
     
     n = 5
     for i in range(1, n + 1):
@@ -299,9 +242,6 @@ def problem_19_sayi_piramidi():
 
 def problem_20_ters_sayi_piramidi():
     """Ters sayı piramidi."""
-    print("\n" + "=" * 50)
-    print("PROBLEM 20: Ters Sayı Piramidi")
-    print("=" * 50)
     
     n = 5
     for i in range(n, 0, -1):
@@ -312,10 +252,7 @@ def problem_20_ters_sayi_piramidi():
 
 def problem_21_floyd_ucgeni():
     """Floyd üçgeni."""
-    print("\n" + "=" * 50)
-    print("PROBLEM 21: Floyd Üçgeni")
-    print("=" * 50)
-    
+        
     n = 5
     num = 1
     for i in range(1, n + 1):
@@ -327,9 +264,6 @@ def problem_21_floyd_ucgeni():
 
 def problem_22_pascal_ucgeni():
     """Pascal üçgeni."""
-    print("\n" + "=" * 50)
-    print("PROBLEM 22: Pascal Üçgeni")
-    print("=" * 50)
     
     n = 6
     for i in range(n):
@@ -344,9 +278,6 @@ def problem_22_pascal_ucgeni():
 
 def problem_23_harf_piramidi():
     """Harf piramidi (A, AB, ABC...)."""
-    print("\n" + "=" * 50)
-    print("PROBLEM 23: Harf Piramidi")
-    print("=" * 50)
     
     n = 5
     for i in range(1, n + 1):
@@ -357,9 +288,6 @@ def problem_23_harf_piramidi():
 
 def problem_24_kum_saati():
     """Kum saati deseni."""
-    print("\n" + "=" * 50)
-    print("PROBLEM 24: Kum Saati")
-    print("=" * 50)
     
     n = 5
     # Üst yarı (daralan)
@@ -372,9 +300,6 @@ def problem_24_kum_saati():
 
 def problem_25_kelebek():
     """Kelebek deseni."""
-    print("\n" + "=" * 50)
-    print("PROBLEM 25: Kelebek Deseni")
-    print("=" * 50)
     
     n = 4
     # Üst yarı
@@ -391,9 +316,7 @@ def problem_25_kelebek():
 
 def problem_26_carpim_tablosu():
     """Çarpım tablosu."""
-    print("\n" + "=" * 50)
-    print("PROBLEM 26: Çarpım Tablosu")
-    print("=" * 50)
+
     
     for i in range(1, 6):
         for j in range(1, 11):
@@ -403,9 +326,7 @@ def problem_26_carpim_tablosu():
 
 def problem_27_harf_frekansi():
     """Cümledeki harf frekansı."""
-    print("\n" + "=" * 50)
-    print("PROBLEM 27: Harf Frekansı")
-    print("=" * 50)
+
     
     cumle = "merhaba dünya"
     frekans = {}
@@ -419,9 +340,7 @@ def problem_27_harf_frekansi():
 
 def problem_28_en_buyuk_en_kucuk():
     """Listede en büyük ve en küçük bulma."""
-    print("\n" + "=" * 50)
-    print("PROBLEM 28: Min/Max Bulma (Döngü ile)")
-    print("=" * 50)
+
     
     liste = [34, 12, 89, 23, 56, 7, 45]
     print(f"Liste: {liste}")
@@ -441,9 +360,7 @@ def problem_28_en_buyuk_en_kucuk():
 
 def problem_29_tekrar_eden_elemanlar():
     """Listede tekrar eden elemanları bul."""
-    print("\n" + "=" * 50)
-    print("PROBLEM 29: Tekrar Eden Elemanlar")
-    print("=" * 50)
+
     
     liste = [1, 2, 3, 2, 4, 3, 5, 6, 3, 7]
     print(f"Liste: {liste}")
@@ -461,9 +378,6 @@ def problem_29_tekrar_eden_elemanlar():
 
 def problem_30_collatz():
     """Collatz dizisi (3n+1 problemi)."""
-    print("\n" + "=" * 50)
-    print("PROBLEM 30: Collatz Dizisi")
-    print("=" * 50)
     
     n = 27
     print(f"Başlangıç: {n}")
@@ -481,8 +395,6 @@ def problem_30_collatz():
 
 def problem_31_tersten_sayma():
     """1000'den 1'e kadar tersten sayma."""
-
-    print("PROBLEM 31: Tersten Sayma (1000 -> 1)")
 
     
     print("İlk 20 sayı: ", end="")
@@ -502,9 +414,7 @@ def problem_31_tersten_sayma():
 
 def problem_32_asal_son_rakam():
     """İlk 10.000 asal sayının kaç tanesi 3 ve 7 ile biter?"""
-    print("\n" + "=" * 50)
-    print("PROBLEM 32: İlk 10.000 Asal - Son Rakam Analizi")
-    print("=" * 50)
+
     
     def asal_mi(n):
         if n < 2:
@@ -544,9 +454,9 @@ def problem_32_asal_son_rakam():
 
 def problem_33_rakam_kupu():
     """3 basamaklı sayılardan, rakamları toplamının küpüne eşit olanlar."""
-    print("\n" + "=" * 50)
+
     print("PROBLEM 33: Rakam Toplamı Küpüne Eşit Sayılar")
-    print("=" * 50)
+
     
     print("3 basamaklı sayılar (100-999) arasında:")
     print("Sayı = (Rakamların Toplamı)³ olanlar:\n")
@@ -574,9 +484,9 @@ def problem_33_rakam_kupu():
 
 # === ANA PROGRAM ===
 if __name__ == "__main__":
-    print("=" * 50)
-    print("   DÖNGÜ PROBLEMLERİ - 30 PRATİK ÖRNEK")
-    print("=" * 50)
+
+
+
     
     # Sayı İşlemleri
     problem_01_basamak_sayisi()

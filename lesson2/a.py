@@ -1,7 +1,5 @@
     
 '''
-    
-
    8. Parantez Kullanımı: ( )
     9. Karşılaştırma Operatörleri:
        - Eşittir: ==
