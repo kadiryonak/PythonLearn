@@ -18,7 +18,8 @@ print(calisan2.email)
 class yazilimci(calisan):  # inherit calisan class
     zam_orani = 1.1
     def __init__(self, isim, soyisim, maas, yetenekler):
-        super().__init__(isim, soyisim, maas)
+        super().__init__(isim, soyisim, maas)  # Ana class dan gelen bilgileri kullanıyoruz.
+        # super class miras aldığımız sınıfın özelliklerini barındırır.
         self.yetenekler = yetenekler
 
     def bilgileri_goster(self):
