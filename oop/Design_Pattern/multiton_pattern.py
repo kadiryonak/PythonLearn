@@ -55,9 +55,9 @@ class VeritabaniBaglantisi:
             print(f"  - {db_adi}: {id(instance)}")
 
 
-# ==========================================
+
 # ÖRNEK 2: Logger Multiton (Dekoratör ile)
-# ==========================================
+
 
 class Logger:
     """
