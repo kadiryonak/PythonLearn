@@ -40,8 +40,8 @@ def ortalama(*args):
 ortalama(1,2,3,4,5,6,7,8,9,10)
 
 
-# ** args olursa parametreye değişken vermem gerekiyor. *args ise vermemelisin
-
+#  *args olması gerekiyor **kwargs ise parametre vermem gerekiyor
+# bu args ve kwargs keyword ü önemli değil aslında * ve ** ile derdini programa anlatıyorsun
 
 
 def topla5(**kwargs):

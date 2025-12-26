@@ -14,7 +14,7 @@ def mesaj_yazdir(fonksiyon):
 
 mesaj_yazdir(selamla)  # "Merhaba!"
 
-print("-" * 40)
+
 
 
 # ÖRNEK 2: İşlem Uygulayıcı
@@ -34,7 +34,7 @@ print(hesapla(topla, 10, 5))  # 15
 print(hesapla(cikar, 10, 5))  # 5
 print(hesapla(carp, 10, 5))   # 50
 
-print("-" * 40)
+
 
 
 # ÖRNEK 3: Listeye Fonksiyon Uygulama
@@ -51,7 +51,7 @@ sayilar = [1, 2, 3, 4, 5]
 print(listeye_uygula(sayilar, kare_al))  # [1, 4, 9, 16, 25]
 print(listeye_uygula(sayilar, kup_al))   # [1, 8, 27, 64, 125]
 
-print("-" * 40)
+
 
 
 # ÖRNEK 4: Built-in Örnekler (map, filter, sorted)
@@ -82,10 +82,10 @@ def islem_yap(veri, basari_callback, hata_callback):
         hata_callback("Geçersiz veri!")
 
 def basari(sonuc):
-    print(f"✓ Başarılı! Sonuç: {sonuc}")
+    print(f"Başarılı Sonuç: {sonuc}")
 
 def hata(mesaj):
-    print(f"✗ Hata: {mesaj}")
+    print(f" Hata: {mesaj}")
 
 islem_yap("5", basari, hata)   # ✓ Başarılı! Sonuç: 10
 islem_yap("abc", basari, hata) # ✗ Hata: Geçersiz veri!

@@ -109,9 +109,7 @@ temiz = list(filter(lambda x: x is not None, veriler))
 print(f"None'sız: {temiz}")  # [1, 2, 3, 4]
 
 
-# ==========================================
-# PRATİK ÖRNEKLER
-# ==========================================
+
 
 # ÖRNEK 9: Asal sayıları bul
 print("\nAsal Sayılar")

@@ -24,7 +24,7 @@ mesaj_yaz()
 # Ben bir mesajım.
 # Hoşça kal!
 
-print("-" * 40)
+
 
 
 # ÖRNEK 2: Parametreli Fonksiyona Decorator
@@ -43,7 +43,7 @@ def topla(a, b):
 
 topla(5, 3)
 
-print("-" * 40)
+
 
 
 # ÖRNEK 3: Zaman Ölçen Decorator
@@ -67,7 +67,6 @@ def uzun_islem():
 
 uzun_islem()
 
-print("-" * 40)
 
 
 # ÖRNEK 4: Birden Fazla Decorator

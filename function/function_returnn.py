@@ -14,7 +14,7 @@ def dis_fonksiyon():
 sonuc = dis_fonksiyon()  # sonuc artık ic_fonksiyon'a referans
 print(sonuc())  # "Ben iç fonksiyonum!"
 
-print("-" * 40)
+
 
 
 # ÖRNEK 2: Parametre ile Fonksiyon Fabrikası
@@ -29,7 +29,7 @@ ucle_carp = carpan_olustur(3)
 print(ikiyle_carp(5))   # 10
 print(ucle_carp(5))     # 15
 
-print("-" * 40)
+
 
 
 # ÖRNEK 3: Koşula Göre Farklı Fonksiyon Döndürme
@@ -51,7 +51,6 @@ def islem_sec(islem):
 hesapla = islem_sec("carp")
 print(hesapla(4, 5))  # 20
 
-print("-" * 40)
 
 
 # ÖRNEK 4: Closure (Kapalı Değişken)
