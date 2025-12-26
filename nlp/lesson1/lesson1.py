@@ -1,45 +1,45 @@
 import re
 import json
+import nltk
 import numpy as np
 import pandas as pd
+
 from typing import List
+from nltk.corpus import stopwords
+from nltk.stem import PorterStemmer
+
+# NLTK verilerini indir (ilk çalıştırmada gerekli)
+nltk.download('stopwords', quiet=True)
+
 
 class TextCleaner:
-    def clean(self,text):
-        text = text.lower() # Harfleri küçültür
-        
-        # 1. Tekrar eden harfleri normalleştirme (örn: 'cooooool' -> 'cool')
-        text = re.sub(r"(.)\1{2,}", r"\1\1", text) 
-        
-        # 2. URL'leri kaldırma (http/https ile başlayan linkler)
+    def __init__(self):
+        self.stop_words = set(stopwords.words('english'))
+        self.stemmer = PorterStemmer()
+    
+    def clean(self, text):
+        text = text.lower()
+        text = re.sub(r"(.)\1{2,}", r"\1\1", text)
         text = re.sub(r"http\S+|www\S+|https\S+", "", text, flags=re.MULTILINE)
-        
-        # 3. HTML etiketlerini kaldırma (örn: <div>...</div>)
         text = re.sub(r"<.*?>", "", text)
-
-        # 4. Hashtag (#) ve Mention (@) kaldırma
-        text = re.sub(r"#\w+", "", text) # #hashtag siler
-        text = re.sub(r"@\w+", "", text) # @kullanici siler
-
-        # 5. Sayıları kaldırma
-        text = re.sub(r"\d+", "", text) 
-
-        # 6. Noktalama işaretlerini kaldırma (Kelimeler ve boşluklar kalsın)
-        text = re.sub(r"[^\w\s]", "", text) 
-
-        # 7. Sadece harfleri tutma (Sayılar ve noktalama gider)
+        text = re.sub(r"#\w+", "", text)
+        text = re.sub(r"@\w+", "", text)
+        text = re.sub(r"\d+", "", text)
+        text = re.sub(r"[^\w\s]", "", text)
         text = re.sub(r"[^a-z\s]", " ", text)
-
-        # 8. Emojileri ve ASCII olmayan karakterleri kaldırma
         text = re.sub(r"[^\x00-\x7F]+", "", text)
-
-        # 9. Fazla boşlukları temizleme (En sona koymak iyidir)
         text = re.sub(r"\s+", " ", text).strip()
-        
         return text
     
-    def tokenizer(self,text: str) -> list:
-        return re.findall(r"\b[a-z]+\b", text) 
+    def tokenize(self, text: str) -> list:
+        return re.findall(r"\b[a-z]+\b", text)
+    
+    def remove_stopwords(self, tokens: list) -> list:
+        return [word for word in tokens if word not in self.stop_words]
+    
+    def stem(self, tokens: list) -> list:
+        return [self.stemmer.stem(word) for word in tokens]
+
 
 class Tokenizer:
     PAD_TOKEN = "<PAD>"
@@ -48,9 +48,15 @@ class Tokenizer:
     def __init__(self):
         self.word2id = {}
         self.id2word = {}
+    
+    def pad_sequence(self, sequence: List[int], max_len: int) -> List[int]:
+        pad_id = self.word2id[self.PAD_TOKEN]
+        if len(sequence) >= max_len:
+            return sequence[:max_len]
+        return sequence + [pad_id] * (max_len - len(sequence))
 
-    def tokenize(self, text: str) -> List[str]:
-        return re.findall(r"\b[a-z]+\b", text)
+    def pad_batch(self, sequences: List[List[int]], max_len: int) -> List[List[int]]:
+        return [self.pad_sequence(seq, max_len) for seq in sequences]
 
     def build_vocab(self, token_lists: List[List[str]]):
         all_tokens = []
@@ -82,11 +88,11 @@ class Tokenizer:
     def load(self, path: str):
         with open(path, "r", encoding="utf-8") as f:
             self.word2id = json.load(f)
-
         self.id2word = {int(idx): word for word, idx in self.word2id.items()}
 
     def __len__(self):
         return len(self.word2id)
+
 
 class NLPPipeline:
     def __init__(self):
@@ -97,13 +103,15 @@ class NLPPipeline:
         texts = texts.dropna()
 
         cleaned = [self.cleaner.clean(t) for t in texts]
-        tokenized = [self.tokenizer.tokenize(t) for t in cleaned]
+        tokenized = [self.cleaner.tokenize(t) for t in cleaned]
+        no_stopwords = [self.cleaner.remove_stopwords(t) for t in tokenized]
+        stemmed = [self.cleaner.stem(t) for t in no_stopwords]
 
-        self.tokenizer.build_vocab(tokenized)
+        self.tokenizer.build_vocab(stemmed)
 
-        encoded = [self.tokenizer.encode(toks) for toks in tokenized]
+        encoded = [self.tokenizer.encode(toks) for toks in stemmed]
 
-        return cleaned, tokenized, encoded
+        return cleaned, stemmed, encoded
 
 
 if __name__ == "__main__":
@@ -133,7 +141,7 @@ if __name__ == "__main__":
             "Terrible performance and bad optimization."
         ]
     }
-
+    
     df = pd.DataFrame(data)
 
     pipeline = NLPPipeline()
@@ -146,7 +154,13 @@ if __name__ == "__main__":
     print(df.head())
     print("Vocab size:", len(pipeline.tokenizer))
 
-    pipeline.tokenizer.save("vocab.json")
+    pipeline.tokenizer.save("lesson1/vocab.json")
 
-    # 🔁 Decode test
+    MAX_LEN = 8
+
+    padded = pipeline.tokenizer.pad_batch(encoded, MAX_LEN)
+    df["padded"] = padded
+
+    print(df[["encoded", "padded"]].head())
     print("Decode example:", pipeline.tokenizer.decode(encoded[0]))
+    print("Encode example:", pipeline.tokenizer.encode(tokens[0]))
