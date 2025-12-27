@@ -221,9 +221,6 @@ for i, chunk in enumerate(chunks[:3]):
     print(f"\n[Chunk {i+1}] ({len(chunk)} karakter)")
     print(f"'{chunk[:150]}...'")
 
-# ============================================================
-# 2. EMBEDDING NEDİR? - TEORİ
-# ============================================================
 
 print("\n" + "="*60)
 print("2. EMBEDDING NEDİR? - TEORİ")
@@ -261,9 +258,7 @@ EMBEDDING MODELLERİ:
 5. Local modeller (sentence-transformers)
 """)
 
-# ============================================================
-# 3. HUGGINGFACE EMBEDDINGS (ÜCRETSİZ)
-# ============================================================
+
 
 print("="*60)
 print("3. HUGGINGFACE EMBEDDINGS (ÜCRETSİZ)")
@@ -306,9 +301,7 @@ except ImportError:
 except Exception as e:
     print(f"Hata: {e}")
 
-# ============================================================
-# 4. COSINE SIMILARITY (BENZERLİK HESAPLAMA)
-# ============================================================
+
 
 print("\n" + "="*60)
 print("4. COSINE SIMILARITY (BENZERLİK HESAPLAMA)")
@@ -362,9 +355,6 @@ try:
 except Exception as e:
     print(f"Benzerlik hesabı yapılamadı: {e}")
 
-# ============================================================
-# 5. CHUNK'LARI EMBEDDİNG'E DÖNÜŞTÜRME
-# ============================================================
 
 print("\n" + "="*60)
 print("5. CHUNK'LARI EMBEDDİNG'E DÖNÜŞTÜRME")
@@ -387,9 +377,6 @@ try:
 except Exception as e:
     print(f"Chunk embedding hatası: {e}")
 
-# ============================================================
-# 6. GOOGLE EMBEDDINGS (API KEY İLE)
-# ============================================================
 
 print("\n" + "="*60)
 print("6. GOOGLE EMBEDDINGS (API KEY İLE)")
@@ -421,9 +408,6 @@ except ImportError:
 except Exception as e:
     print(f"Google Embedding hatası: {e}")
 
-# ============================================================
-# 7. VECTOR STORE'A KAYDETME (CHROMA)
-# ============================================================
 
 print("\n" + "="*60)
 print("7. VECTOR STORE'A KAYDETME (CHROMA)")

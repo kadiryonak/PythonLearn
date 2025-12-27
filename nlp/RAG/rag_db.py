@@ -8,9 +8,8 @@ import os
 from dotenv import load_dotenv
 load_dotenv()
 
-# ============================================================
+
 # 1. CHROMA VECTOR STORE
-# ============================================================
 
 from langchain_chroma import Chroma
 from langchain_huggingface import HuggingFaceEmbeddings
@@ -26,12 +25,9 @@ def get_embeddings():
     )
 
 
-# ============================================================
-# 2. YENİ VECTOR STORE OLUŞTUR
-# ============================================================
+
 
 def create_vectorstore(documents: list, collection_name: str = "default"):
-    """Dokümanlardan yeni vector store oluştur"""
     embeddings = get_embeddings()
     
     vectorstore = Chroma.from_documents(
@@ -43,9 +39,6 @@ def create_vectorstore(documents: list, collection_name: str = "default"):
     return vectorstore
 
 
-# ============================================================
-# 3. KALICI VECTOR STORE (DİSKE KAYDET)
-# ============================================================
 
 def create_persistent_vectorstore(
     documents: list,
@@ -98,10 +91,6 @@ def add_documents(vectorstore, documents: list):
     return vectorstore
 
 
-# ============================================================
-# 6. BENZERLİK ARAMA
-# ============================================================
-
 def similarity_search(vectorstore, query: str, k: int = 3):
     """Sorguya en benzer dokümanları bul"""
     results = vectorstore.similarity_search(query, k=k)
@@ -114,9 +103,7 @@ def similarity_search_with_scores(vectorstore, query: str, k: int = 3):
     return results
 
 
-# ============================================================
-# 7. RETRIEVER OLUŞTUR
-# ============================================================
+
 
 def get_retriever(vectorstore, k: int = 3, search_type: str = "similarity"):
     """Vector store'dan retriever oluştur"""

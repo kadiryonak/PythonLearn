@@ -67,15 +67,15 @@ response = model.invoke(content)
 
 
 
-for response in model.batch_as_completed(
-    [
-        HumanMessage(content = "2 + 2 "),
-        HumanMessage(content = "savaş"),
-        HumanMessage(content = "NLP nedir?"),
-        HumanMessage(content = "NLP nedir?"),
-        HumanMessage(content = "NLP nedir?")
-    ]
-)
+# for response in model.batch_as_completed(
+#     [
+#         HumanMessage(content = "2 + 2 "),
+#         HumanMessage(content = "savaş"),
+#         HumanMessage(content = "NLP nedir?"),
+#         HumanMessage(content = "NLP nedir?"),
+#         HumanMessage(content = "NLP nedir?")
+#     ]
+# ),
 
 response = model.batch(
     [
